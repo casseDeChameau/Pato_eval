@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "gulp-sass": "^4.1.0",
+    "isotope-layout": "^3.0.6",
     "lightbox2": "^2.11.3"
   }
 }

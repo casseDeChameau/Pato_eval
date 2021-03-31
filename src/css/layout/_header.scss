@@ -1,19 +1,33 @@
 .header {
+    position: fixed;
     width: 100%;
-    height: 100px;
-    @include flex-mixin;
+    height: 100vh;
+    border-top: 5px solid $red;
+    @include flex-mixin($jcc: flex-start);
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 90px;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0);
+        transition: all .1s ease-in-out;
+    }
     .flex-wrap {
+        position: relative;
+        z-index: 10;
+        height: 120px;
         @include flex-mixin($dir: row, $jcc: space-between);
         .logo {
-            width: 5rem;
+            min-width: 7rem;
             height: 3rem;
-            background: url('../img/logo2.png') center/contain no-repeat;
+            background: url('../img/logo.png') center/contain no-repeat;
             h1 {
                 display: none;
             }
         }
         .main-nav {
-            // margin: 0 auto;
+            margin: 0 auto;
             ul {
                 display: flex;
                 justify-content: space-between;
@@ -21,11 +35,10 @@
                     list-style: none;
                     padding-right: 2rem;
                     a {
-                        color: $lightgrey;
                         h4 {
                             font-family: 'Montserrat', sans-serif;
-                            font-size: .7rem;
-                            font-weight: 300;
+                            font-size: .8rem;
+                            font-weight: 400;
                         }
                         text-decoration: none;
                         &:hover {
@@ -35,29 +48,50 @@
                     }
                 }
             }
+            @media screen and (max-width: 1024px) {
+                display: none;
+            }
         }
-        .burger-menu {
-            width: 20px;
-            height: 10px;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            margin-left: 1rem;
-            .stripe {
-                width: 100%;
-                height: 1px;
-                background-color: $lightgrey;
+        .main-nav a,
+        .socials-nav a {
+            color: white;
+        }
+        .right-nav {
+            @include flex-mixin($dir: row);
+            .burger-menu {
+                width: 25px;
+                height: 1rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                margin-left: 1rem;
+                .stripe {
+                    width: 100%;
+                    height: 2px;
+                    background-color: white;
+                }
             }
         }
     }
     &.on-scroll {
-        background-color: rgba(255, 255, 255, .8);
-        color: $darkgrey;
-        .main-nav a {
+        .flex-wrap {
+            height: 90px;
+            transition: all .3s ease-in-out;
             color: $darkgrey;
+            .logo {
+                background: url('../img/logo2.png') center/contain no-repeat;
+            }
+            .main-nav a,
+            .socials-nav a {
+                color: $darkgrey;
+            }
+            .burger-menu .stripe {
+                background-color: $darkgrey;
+            }
         }
-        .stripe {
-            background-color: $darkgrey;
+        &:before {
+            background-color: rgba(255, 255, 255, .8);
+            transition: all .1s ease-in-out;
         }
     }
 }

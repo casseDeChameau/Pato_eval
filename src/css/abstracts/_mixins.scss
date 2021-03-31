@@ -1,4 +1,4 @@
-@mixin flex-mixin($dir:column, $wrap: nowrap, $jcc: center, $aic: center) {
+@mixin flex-mixin($dir:column, $wrap: wrap, $jcc: center, $aic: center) {
     display: flex;
     flex-direction: $dir;
     flex-wrap: $wrap;
