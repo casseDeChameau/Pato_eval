@@ -1,1 +1,41 @@
 // :root{}
+body {
+    width: 100vw;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex-wrap {
+    width: 75%;
+    // padding: 1rem;
+}
+
+.bloc-content {
+    display: flex;
+    flex-direction: column;
+    * {
+        margin: 0;
+    }
+}
+
+.socials-nav {
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+        li {
+            list-style: none;
+            padding-right: 1rem;
+            font-size: .8rem;
+            a {
+                color: $darkgrey;
+                &:hover {
+                    color: $red;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}
