@@ -12,8 +12,8 @@
 
 </head>
 
-<body class="contact-body">
-    <header class="header">
+<body id="body" class="contact-body">
+    <header class="header" id="header">
         <div class="flex-wrap">
             <div class="logo">
                 <h1>PATO RESTAURANT</h1>
@@ -71,36 +71,88 @@
                 </div>
             </div>
         </div>
+        <div class="burger-panel">
+            <div class="cross">
+                <div class="oblique-r"></div>
+                <div class="oblique-l"></div>
+            </div>
+            <nav class="panel-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <h4>HOME</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>MENU</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>RESERVATION</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">
+                            <h4>GALLERY</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>ABOUT</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>BLOG</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <h4>CONTACT</h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn">reservation</button>
+        </div>
     </header>
+    <div class="totop"><a href="#body"><i class="fas fa-angle-double-up"></i></a></div>
 
-    <div class="hero-contact"></div>
+    <div class="hero-contact">
+        <h1>CONTACT</h1>
+    </div>
 
     <section id="contact">
 
         <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5204411525438!2d-74.00966008509508!3d40.72857234453938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f2a8c6795f%3A0x60baade8bb5023b2!2s379%20Hudson%20St%2C%20New%20York%2C%20NY%2010014%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sbe!4v1617196994030!5m2!1sfr!2sbe"
             width="1024" height="400" allowfullscreen="true" loading="lazy"></iframe>
 
-        <form class="form">
-            <h2>SEND US A MESSAGE</h2>
-            <div class="id-form">
-                <div class="input-label">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Name" id="name">
+        <div class="flex-wrap">
+            <form class="form">
+                <h2>SEND US A MESSAGE</h2>
+                <div class="id-form">
+                    <div class="input-label">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Name" id="name">
+                    </div>
+                    <div class="input-label">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Email" id="email">
+                    </div>
+                    <div class="input-label">
+                        <label for="phone">Phone</label>
+                        <input type="text" placeholder="Phone" id="phone">
+                    </div>
                 </div>
                 <div class="input-label">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Email" id="email">
+                    <label for="message">Message</label>
+                    <textarea placeholder="Message" id="message"></textarea>
                 </div>
-                <div class="input-label">
-                    <label for="phone">Phone</label>
-                    <input type="text" placeholder="Phone" id="phone">
-                </div>
-            </div>
-            <div class="input-label">
-                <label for="message">Message</label>
-                <textarea placeholder="Message" id="message"></textarea>
-            </div>
-        </form>
+                <button class="btn btn">submit</button>
+            </form>
+        </div>
 
 
     </section>

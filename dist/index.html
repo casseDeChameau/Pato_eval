@@ -10,14 +10,14 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- swiper -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- lightbox -->
     <!-- <link rel="stylesheet" href="js/lightbox2-2.11.3/lightbox.css"> -->
 
 </head>
 
-<body id="index-body">
-    <header class="header">
+<body id="body" class="index-body">
+    <header class="header" id="header">
         <div class="flex-wrap">
             <div class="logo">
                 <h1>PATO RESTAURANT</h1>
@@ -75,10 +75,235 @@
                 </div>
             </div>
         </div>
+        <div class="burger-panel">
+            <div class="cross">
+                <div class="oblique-r"></div>
+                <div class="oblique-l"></div>
+            </div>
+            <nav class="panel-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <h4>HOME</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>MENU</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>RESERVATION</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">
+                            <h4>GALLERY</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>ABOUT</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>BLOG</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <h4>CONTACT</h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn">reservation</button>
+        </div>
     </header>
+    <div class="totop"><a href="#body"><i class="fas fa-angle-double-up"></i></a></div>
 
-    <div class="hero-banner"></div>
+    <div class="hero-banner">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="bloc-content">
+                            <div class="bloc-title">
+                                <span>Welcome to</span>
+                                <h2>Pato Palace</h2>
+                            </div>
+                            <button class="btn">look menu</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="bloc-content">
+                            <div class="bloc-title">
+                                <span>Welcome to</span>
+                                <h2>Pato Palace</h2>
+                            </div>
+                            <button class="btn">look menu</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="bloc-content">
+                            <div class="bloc-title">
+                                <span>Welcome to</span>
+                                <h2>Pato Palace</h2>
+                            </div>
+                            <button class="btn">look menu</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
     <section id="index">
+
+        <div class="welcome">
+            <div class="flex-wrap">
+                <div class="bloc-content">
+                    <div class="bloc-title">
+                        <span>italian restaurant</span>
+                        <h2>welcome</h2>
+                    </div>
+                    <div class="bloc-text">
+                        <p>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+                        </p>
+                        <div class="bloc-link">
+                            <h5>our story</h5>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-content">
+                    <div class="bloc-img"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-banner">
+            <div class="flex-wrap">
+                <div class="bloc-content">
+                    <div class="bloc-title">
+                        <span>discover</span>
+                        <h2>pato palace</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="flex-wrap">
+                <div class="bloc-content">
+                    <div class="bloc-title">
+                        <span>discover</span>
+                        <h2>our menu</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-banner">
+            <div class="flex-wrap">
+                <div class="bloc-content">
+                    <div class="bloc-title">
+                        <span>customer say</span>
+                        <h2>review</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bloc-content">
+                            <div class="text-content">
+                                <div class="avatar-pic"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
+                                <div class="rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloc-content">
+                            <div class="text-content">
+                                <div class="avatar-pic"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
+                                <div class="rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex-wrap">
+                            <div class="bloc-content">
+                                <div class="text-content">
+                                    <div class="avatar-pic"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
+                                    <div class="rate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="parallax-banner vid-banner">
+            <div class="flex-wrap"></div>
+        </div>
+
+        <div class="blog">
+            <div class="flex-wrap">
+                <div class="bloc-content">
+                    <div class="bloc-title">
+                        <span>Latest news</span>
+                        <h2>the blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-wrap">
+                <div class="bloc-content">
+
+                </div>
+                <div class="bloc-content">
+
+                </div>
+                <div class="bloc-content">
+
+                </div>
+            </div>
+        </div>
+
 
     </section>
 
@@ -122,8 +347,8 @@
 <!-- parallax -->
 <!-- <script src="js/parallax.js-1.5.0/parallax.min.js"></script> -->
 <!-- swiper -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="js/swiper-script.min.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/swiper-script.min.js"></script>
 <!-- lightbox -->
 <!-- <script src="js/lightbox2-2.11.3/lightbox.min.js"></script> -->
 <!-- main script -->
