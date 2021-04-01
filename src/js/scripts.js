@@ -15,4 +15,10 @@ $('.cross').click(() => {
     console.log('click on cross');
     $('.header').removeClass('show-panel')
 })
-$('.logo').click(()=> {window.location = 'index.html'})
+$('.logo').click(() => {
+    window.location = 'index.html'
+});
+$('.parallax-banner').parallax({
+    naturalWidth: '100%',
+    positionX: '0'
+});

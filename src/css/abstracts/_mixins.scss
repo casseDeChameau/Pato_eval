@@ -26,3 +26,16 @@
     background-color: $hbgcol;
     color: $hcol;
 }
+
+@mixin img-frame($w:400px, $h:400px, $bgurl:'../img/our-story-01.jpg') {
+    width: $w;
+    height: $h;
+    background: url($bgurl) center/cover no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    transition: .5s all ease-in-out;
+    &:hover {
+        transition: .5s all ease-in-out;
+        background-size: 110%;
+    }
+}

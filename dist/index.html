@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pato Eval</title>
-    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="icon" href="img/favicon_casseDeChameau1.ico" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- lightbox -->
-    <!-- <link rel="stylesheet" href="js/lightbox2-2.11.3/lightbox.css"> -->
+    <link rel="stylesheet" href="js/magnific-popup/magnific-popup.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+
 
 </head>
 
@@ -189,13 +191,11 @@
             </div>
         </div>
 
-        <div class="parallax-banner">
-            <div class="flex-wrap">
-                <div class="bloc-content">
-                    <div class="bloc-title">
-                        <span>discover</span>
-                        <h2>pato palace</h2>
-                    </div>
+        <div class="parallax-banner parallax-window" data-parallax="scroll" data-image-src="img/bg-intro-01.jpg">
+            <div class="bloc-content">
+                <div class="bloc-title">
+                    <span>discover</span>
+                    <h2>pato palace</h2>
                 </div>
             </div>
         </div>
@@ -220,42 +220,12 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="bloc-content">
-                            <div class="text-content">
-                                <div class="avatar-pic"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
-                                <div class="rate">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bloc-content">
-                            <div class="text-content">
-                                <div class="avatar-pic"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
-                                <div class="rate">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flex-wrap">
+            <div class="swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="bloc-content">
-                                <div class="text-content">
+                                <div class="bloc-text">
                                     <div class="avatar-pic"></div>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
                                     <div class="rate">
@@ -265,21 +235,64 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
+                                    <h6>Jhonny knoxville - jackass city</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloc-content">
+                                <div class="bloc-text">
+                                    <div class="avatar-pic"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
+                                    <div class="rate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h6>Jhonny knoxville - jackass city</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloc-content">
+                                <div class="bloc-text">
+                                    <div class="avatar-pic"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia aut, fugit ipsa eaque architecto repellendus quidem haru.</p>
+                                    <div class="rate">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h6>Jhonny knoxville - jackass city</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
 
-        <div class="parallax-banner vid-banner">
-            <div class="flex-wrap"></div>
+        <div class="parallax-banner vid-banner parallax-window" data-parallax="scroll" data-image-src="img/bg-cover-video-02.jpg">
+            <div class="bloc-content">
+                <div class="bloc-title">
+                    <span>discover</span>
+                    <h2>our video</h2>
+                    <div class="play">
+                        <a href="img/bg-cover-video-02.jpg" data-lightbox="image-1" data-title="My caption">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="blog">
@@ -343,14 +356,15 @@
 
 </body>
 <!-- jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <!-- parallax -->
-<!-- <script src="js/parallax.js-1.5.0/parallax.min.js"></script> -->
+<script src="js/parallax.min.js"></script>
 <!-- swiper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/swiper-script.min.js"></script>
 <!-- lightbox -->
-<!-- <script src="js/lightbox2-2.11.3/lightbox.min.js"></script> -->
+<script src="js/magnific-popup/jquery.magnific-popup.js"></script>
 <!-- main script -->
 <script src="js/scripts.min.js"></script>
 

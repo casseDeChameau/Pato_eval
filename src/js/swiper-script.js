@@ -14,8 +14,9 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
-$('.hero-banner').mouseenter(() => {
+$('.hero-banner, .review-banner').mouseenter(() => {
     $('.swiper-container *').addClass('show-arrows');
+    console.log('prout');
 }).mouseleave(() => {
     $('.swiper-container *').removeClass('show-arrows');
 });
