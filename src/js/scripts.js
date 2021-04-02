@@ -28,51 +28,41 @@ if (window.location == 'index.html') {
 }
 
 // ? plugin lightbox 
-if (window.location == 'index.html' || window.location == 'gallery.html') {
-    //? init
-    $(document).ready(function() {
-        $('.image-link').magnificPopup({
-            type: 'image'
-        });
-    });
+$('.vid-popup').magnificPopup({
+    type: 'iframe'
+});
 
-    // ? plugin hp popup
-    $('.vid-popup').magnificPopup({
-        type: 'iframe'
-    });
-
-    $('.grid').magnificPopup({
-        items: [{
-                src: '../img/photo-gallery-01.jpg'
-            },
-            {
-                src: '../img/photo-gallery-02.jpg',
-            },
-            {
-                src: '../img/photo-gallery-03.jpg',
-            },
-            {
-                src: '../img/photo-gallery-04.jpg',
-            },
-            {
-                src: '../img/photo-gallery-05.jpg',
-            },
-            {
-                src: '../img/photo-gallery-06.jpg',
-            },
-            {
-                src: '../img/photo-gallery-07.jpg',
-            },
-            {
-                src: '../img/photo-gallery-08.jpg',
-            },
-            {
-                src: '../img/photo-gallery-09.jpg',
-            }
-        ],
-        gallery: {
-            enabled: true
+$('.grid').magnificPopup({
+    items: [{
+            src: '../img/photo-gallery-01.jpg'
         },
-        type: 'image'
-    });
-}
+        {
+            src: '../img/photo-gallery-02.jpg',
+        },
+        {
+            src: '../img/photo-gallery-03.jpg',
+        },
+        {
+            src: '../img/photo-gallery-04.jpg',
+        },
+        {
+            src: '../img/photo-gallery-05.jpg',
+        },
+        {
+            src: '../img/photo-gallery-06.jpg',
+        },
+        {
+            src: '../img/photo-gallery-07.jpg',
+        },
+        {
+            src: '../img/photo-gallery-08.jpg',
+        },
+        {
+            src: '../img/photo-gallery-09.jpg',
+        }
+    ],
+    gallery: {
+        enabled: true
+    },
+    type: 'image'
+});
