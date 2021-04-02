@@ -1,4 +1,5 @@
-@mixin flex-mixin($dir:column, $wrap: wrap, $jcc: center, $aic: center) {
+// ? base flex colonne et centrée
+@mixin flex-mixin($dir:column, $wrap: nowrap, $jcc: center, $aic: center) {
     display: flex;
     flex-direction: $dir;
     flex-wrap: $wrap;
@@ -6,6 +7,7 @@
     align-items: $aic;
 }
 
+// ? base de chaque boutton, couleurs changeables
 @mixin btn($col: $red, $bgcol: white) {
     width: 120px;
     height: 40px;
@@ -19,23 +21,41 @@
     color: $col;
     cursor: pointer;
     @include flex-mixin;
+    transition: all .3s ease-in-out;
 }
 
+// ? base hover boutton
 @mixin btn-hover($hcol: white, $hbgcol: $red) {
-    transition: all .3s ease-in-out;
     background-color: $hbgcol;
     color: $hcol;
+    transition: all .3s ease-in-out;
 }
 
-@mixin img-frame($w:400px, $h:400px, $bgurl:'../img/our-story-01.jpg') {
+// ? image en bg 
+@mixin img-frame($w:unset, $h:unset, $bgurl:'../img/our-story-01.jpg') {
+    max-width: 100%;
     width: $w;
+    max-height: 100%;
     height: $h;
-    background: url($bgurl) center/cover no-repeat;
-    background-size: 100%;
+    background-image: url($bgurl);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
     transition: .5s all ease-in-out;
     &:hover {
         transition: .5s all ease-in-out;
-        background-size: 110%;
+        background-size: 120%;
     }
+}
+
+@mixin post-date {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    color: white;
+    font-size: .8rem;
 }

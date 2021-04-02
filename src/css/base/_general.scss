@@ -43,7 +43,7 @@ body {
 .flex-wrap {
     max-width: 1024px;
     width: 80%;
-    @include flex-mixin();
+    @include flex-mixin($dir: row, $wrap: nowrap);
 }
 
 .bloc-content,
@@ -81,31 +81,34 @@ body {
     color: grey;
     font-weight: 400;
     line-height: 1.5rem;
-    .bloc-link {
-        color: black;
-        display: flex;
-        align-items: center;
-        margin: 2rem 0;
-        cursor: pointer;
-        h5 {
-            padding-right: 1rem;
-            letter-spacing: .1rem;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-        .fas {
-            font-size: .8rem;
-        }
-        &:hover {
-            color: $red;
-        }
+}
+
+.bloc-link {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    cursor: pointer;
+    h5 {
+        padding-right: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .fas {
+        font-size: .8rem;
+    }
+    &:hover {
+        color: $red;
     }
 }
 
-.bloc-img {
-    @include img-frame;
-    .btn {
-        @include btn;
+.bloc-frame {
+    .bloc-img {
+        @include img-frame;
+        .btn {
+            @include btn;
+        }
     }
 }
 

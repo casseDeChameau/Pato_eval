@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pato Eval</title>
-    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="icon" href="img/favicon_casseDeChameau1.ico" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <!-- isotope -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- lightbox -->
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+
 
 </head>
 
@@ -125,7 +127,55 @@
     <div class="hero-gallery"></div>
 
     <section id="gallery">
-        <!-- todo : set as shown here: https://isotope.metafizzy.co/ -->
+
+        <div id="filters" class="button-group">
+            <button class="button is-checked" data-filter="*">all photo</button>
+            <button class="button" data-filter=".interior">interior</button>
+            <button class="button" data-filter=".food">food</button>
+            <button class="button" data-filter=".events">events</button>
+            <button class="button" data-filter=".vip">vip guests</button>
+        </div>
+
+        <div class="grid">
+            <div class="element-item interior" data-category="interior">
+                <img src="img/photo-gallery-01.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item food" data-category="food">
+                <img src="img/photo-gallery-02.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item events" data-category="events">
+                <img src="img/photo-gallery-03.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item interior vip" data-category="interior">
+                <img src="img/photo-gallery-04.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item food vip" data-category="food">
+                <img src="img/photo-gallery-05.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item events vip" data-category="events">
+                <img src="img/photo-gallery-06.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item interior vip" data-category="interior">
+                <img src="img/photo-gallery-07.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item food vip" data-category="food">
+                <img src="img/photo-gallery-08.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="element-item events vip" data-category="events">
+                <img src="img/photo-gallery-09.jpg" alt="pato-photo-gallery">
+                <a class="btn zoom-btn"><i class="fas fa-search"></i></a>
+            </div>
+
+        </div>
+
     </section>
 
     <footer class="footer">
@@ -165,8 +215,11 @@
 </body>
 <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="js/isotope.min.js"></script>
 <!-- lightbox -->
-<!-- <script src="js/lightbox2-2.11.3/lightbox.min.js"></script> -->
+<script src="js/jquery.magnific-popup.min.js"></script>
 <!-- main script -->
 <script src="js/scripts.min.js"></script>
 

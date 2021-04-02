@@ -1,0 +1,47 @@
+// ? isotope button
+
+/* ---- button-group ---- */
+
+.button-group {
+    margin: 100px;
+    @include flex-mixin($dir: row);
+}
+
+.button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.button-group .button {
+    float: left;
+    margin: 0 2rem;
+    border-radius: .8rem;
+}
+
+
+/* ---- button ---- */
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: none;
+    border: none;
+    color: #222;
+    font-size: .85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #000;
+    color: white;
+}
+
+.button:active,
+.button.is-checked {
+    background-color: #000;
+    color: white;
+}
