@@ -1,9 +1,3 @@
-// * {
-//     box-sizing: border-box;
-// }
-// body {
-//     font-family: sans-serif;
-// }
 .hero-gallery {
     width: 100%;
     height: 80vh;
@@ -17,31 +11,24 @@
 }
 
 #gallery {
-    width: 100%;
+    width: 90%;
+    padding: 3rem 0 10rem;
     @include flex-mixin;
     /* ---- isotope ---- */
     .grid {
-        height: 100%;
-        width: 100%;
-        @include flex-mixin($dir: row, $wrap: wrap)
-    }
-    /* clear fix */
-    .grid:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    /* ---- .element-item ---- */
-    .element-item>* {
-        margin: 0;
-        padding: 0;
+        @include flex-mixin;
     }
     .element-item {
-        position: relative;
-        @include img-frame($w: 400px, $h: 300px);
+        @include flex-mixin;
+        @include img-frame($w: 31%, $h: 300px);
+        @media screen and (max-width: 772px) {
+            @include img-frame($w: 45%, $h: 200px);
+        }
+        @media screen and (max-width: 572px) {
+            @include img-frame($w: 100%, $h: 300px);
+        }
         overflow: hidden;
         margin: 10px;
-        transition: all .3s ease-in-out;
         &:after {
             content: '';
             position: absolute;
@@ -66,48 +53,28 @@
                 transform: scale(1.1);
             }
         }
-    }
-    .element-item img {
-        transition: all .3s ease-in-out;
-        transform: scale(1);
-        width: 100%;
-    }
-    .element-item .zoom-btn {
-        @include btn;
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        top: 50%;
-        margin: 0;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        color: $darkgrey;
-        &:hover {
-            @include btn-hover($hbgcol: white, $hcol: $red);
+        img {
+            transition: all .3s ease-in-out;
+            transform: scale(1);
+            width: 100%;
         }
-        opacity: 0;
+        .zoom-btn {
+            @include btn;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            margin: 0;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: $darkgrey;
+            &:hover {
+                @include btn-hover($hbgcol: white, $hcol: $red);
+            }
+            opacity: 0;
+        }
     }
 }
-
-// .element-item .symbol {
-//     position: absolute;
-//     left: 10px;
-//     top: 0px;
-//     font-size: 42px;
-//     font-weight: bold;
-//     color: white;
-// }
-// .element-item .number {
-//     position: absolute;
-//     right: 8px;
-//     top: 5px;
-// }
-// .element-item .weight {
-//     position: absolute;
-//     left: 10px;
-//     top: 76px;
-//     font-size: 12px;
-// }

@@ -47,7 +47,7 @@ section>div {
             width: 50%;
         }
         .bloc-img {
-            @include img-frame($w: 400px, $h: 400px)
+            @include img-frame($w: 400px, $h: 400px, $bgurl: '../img/our-story-01.jpg')
         }
         @media screen and (max-width: 772px) {
             @include flex-mixin($dir: column, $jcc: flex-start);
@@ -55,7 +55,7 @@ section>div {
                 width: 100%;
             }
             .bloc-img {
-                @include img-frame($w: 90vmin, $h: 90vmin);
+                @include img-frame($w: 90vmin, $h: 90vmin, $bgurl: '../img/our-story-01.jpg');
             }
         }
     }
@@ -117,51 +117,110 @@ section>div {
     padding: 5rem 0 10rem;
     .flex-wrap:nth-child(2) {
         @include flex-mixin($dir: row);
+        @media screen and (max-width: 1024px) {
+            @include flex-mixin;
+        }
+        .bloc-img {
+            position: relative;
+            @include flex-mixin;
+            @include img-frame($w: 31%, $h: 300px);
+            // @media screen and (max-width: 772px) {
+            //     @include img-frame($w: 45%, $h: 200px);
+            // }
+            // @media screen and (max-width: 572px) {
+            //     @include img-frame($w: 100%, $h: 300px);
+            // }
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .bloc-img img {
+            transition: all .3s ease-in-out;
+            transform: scale(1);
+            min-width: 100%;
+            min-height: 100%;
+        }
         .bc-left {
             @include flex-mixin();
             width: 66%;
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
             .bloc-two-img {
                 display: flex;
-                // justify-content: space-around;
+                @media screen and (max-width: 772px) {
+                    flex-direction: column;
+                }
                 .bloc-img {
                     &:nth-of-type(1) {
-                        @include img-frame($bgurl: '../img/our-menu-01.jpg', $h: 440px, $w: 325px);
+                        @include img-frame($h: 440px, $w: 325px);
                         margin-right: 10px;
+                        @media screen and (max-width: 772px) {
+                            margin-right: 0;
+                            width: 660px;
+                            height: 300px;
+                        }
                     }
                     &:nth-of-type(2) {
-                        @include img-frame($bgurl: '../img/our-menu-05.jpg', $h: 440px, $w: 325px);
+                        @include img-frame($h: 440px, $w: 325px);
+                        @media screen and (max-width: 772px) {
+                            height: 300px;
+                            width: 660px;
+                        }
                     }
                 }
             }
             .bloc-img {
-                @include img-frame($bgurl: '../img/our-menu-13.jpg', $h: 210px, $w: 660px);
+                @include img-frame($h: 210px, $w: 660px);
                 margin-top: 10px;
             }
         }
         .bc-right {
             width: 33%;
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
             .bloc-img {
                 &:nth-of-type(1) {
                     @include img-frame($bgurl: '../img/our-menu-08.jpg', $h: 220px, $w: 340px);
                     margin: 10px 0 0 10px;
+                    @media screen and (max-width: 1024px) {
+                        height: 300px;
+                        width: 660px;
+                    }
                 }
                 &:nth-of-type(2) {
                     @include img-frame($bgurl: '../img/our-menu-10.jpg', $h: 210px, $w: 340px);
                     margin: 10px 0 0 10px;
+                    @media screen and (max-width: 1024px) {
+                        height: 300px;
+                        width: 660px;
+                    }
                 }
                 &:nth-of-type(3) {
                     @include img-frame($bgurl: '../img/our-menu-16.jpg', $h: 210px, $w: 340px);
                     margin: 10px 0 0 10px;
+                    @media screen and (max-width: 1024px) {
+                        height: 300px;
+                        width: 660px;
+                    }
                 }
             }
         }
         .btn {
+            position: absolute;
             @include btn($col: $darkgrey, $bgcol: rgba(255, 255, 255, .8));
             font-size: 1.2rem;
-            font-weight: 600;
-            height: 50px;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            height: unset;
+            width: unset;
+            padding: 1rem 2rem;
             &:hover {
-                @include btn-hover();
+                @include btn-hover($hbgcol: rgba(255, 0, 0, .8));
             }
         }
     }
@@ -186,7 +245,7 @@ section>div {
                 background: url('../img/avatar-03.jpg') center/cover no-repeat;
             }
         }
-        margin: 3rem 0;
+        margin: 0 0 3rem;
         .bloc-text {
             width: 80%;
             .avatar-pic {
@@ -232,32 +291,33 @@ section>div {
             @media screen and (max-width: 1024px) {
                 width: 100%;
             }
-            &.blog-img {
+            .bloc-img {
                 position: relative;
-                display: none;
-                .date {
-                    position: absolute;
-                    bottom: 1rem;
-                    left: 1rem;
-                    p {
-                        background-color: rgba(0, 0, 0, .5);
-                        border-radius: 5px;
-                        color: white;
+                @include flex-mixin;
+                max-width: 100%;
+                max-height: 100%;
+                overflow: hidden;
+                @include img-frame($w: 100%, $h: 200px);
+                @media screen and (max-width: 1024px) {
+                    @include img-frame($h: 100%, $w: 100%);
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
                     }
+                }
+                img {
+                    transition: all .3s ease-in-out;
+                    transform: scale(1);
+                    min-width: 100%;
+                    min-height: 100%;
                 }
             }
             &:nth-child(1) {
                 .bloc-img {
-                    position: relative;
                     &:after {
                         content: '21 Dec 2017';
                         @include post-date;
-                    }
-                    @include img-frame($bgurl: '../img/blog-01.jpg',
-                    $w: 400px,
-                    $h: 200px);
-                    @media screen and (max-width: 1024px) {
-                        @include img-frame($bgurl: '../img/blog-01.jpg', $w: 800px, $h: 300px);
                     }
                 }
             }
@@ -268,12 +328,6 @@ section>div {
                         content: '15 Dec 2017';
                         @include post-date;
                     }
-                    @include img-frame($bgurl: '../img/blog-02.jpg',
-                    $w: 400px,
-                    $h: 200px);
-                    @media screen and (max-width: 1024px) {
-                        @include img-frame($bgurl: '../img/blog-02.jpg', $w: 800px, $h: 300px);
-                    }
                 }
             }
             &:nth-child(3) {
@@ -282,12 +336,6 @@ section>div {
                     &:after {
                         content: '12 Dec 2017';
                         @include post-date;
-                    }
-                    @include img-frame($bgurl: '../img/blog-03.jpg',
-                    $w: 400px,
-                    $h: 200px);
-                    @media screen and (max-width: 1024px) {
-                        @include img-frame($bgurl: '../img/blog-03.jpg', $w: 800px, $h: 300px);
                     }
                 }
             }

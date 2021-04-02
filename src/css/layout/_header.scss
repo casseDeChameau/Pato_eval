@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     z-index: 2;
-    width: 100%;
+    min-width: 100%;
     border-top: 5px solid $red;
     @include flex-mixin($wrap: nowrap, $jcc: flex-start);
     .flex-wrap {
@@ -114,7 +114,9 @@
         top: 0;
         right: -300px;
         padding: 100px 0 0;
-        background-color: white;
+        background-color: #ffffff;
+        visibility: hidden;
+        display: none;
         @include flex-mixin($jcc: flex-start);
         .cross {
             position: absolute;
@@ -179,6 +181,7 @@
             background-color: rgba(0, 0, 0, .5);
         }
         .burger-panel {
+            visibility: visible;
             right: 0;
         }
     }

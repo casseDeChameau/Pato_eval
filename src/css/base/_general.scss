@@ -1,7 +1,12 @@
-// :root{}
+:root {
+    scroll-behavior: smooth;
+}
+
 body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    // max-width: 100%;
+    // max-height: 100%;
     top: 0;
     bottom: 0;
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +21,6 @@ body {
     h6 {
         font-family: 'Poppins', sans-serif;
     }
-    scroll-behavior: smooth;
 }
 
 .totop {
@@ -24,10 +28,18 @@ body {
     z-index: 1;
     width: 40px;
     height: 40px;
-    bottom: 3rem;
-    right: 3rem;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .5);
+    bottom: 3rem;
+    right: 3rem;
+    @media screen and (max-width: 772px) {
+        bottom: 2rem;
+        right: 2rem;
+    }
+    @media screen and (max-width: 572px) {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
     a {
         @include flex-mixin;
         text-decoration: none;
@@ -44,6 +56,14 @@ body {
     max-width: 1024px;
     width: 80%;
     @include flex-mixin($dir: row, $wrap: nowrap);
+    @media screen and (max-width: 772px) {
+        width: 90%;
+        @include flex-mixin($dir: row, $wrap: wrap);
+    }
+    @media screen and (max-width: 572px) {
+        width: 90%;
+        @include flex-mixin($dir: column, $wrap: nowrap);
+    }
 }
 
 .bloc-content,

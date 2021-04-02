@@ -32,10 +32,8 @@
 }
 
 // ? image en bg 
-@mixin img-frame($w:unset, $h:unset, $bgurl:'../img/our-story-01.jpg') {
-    max-width: 100%;
+@mixin img-frame($w:unset, $h:unset, $bgurl:'../img/video-16-9.jpg') {
     width: $w;
-    max-height: 100%;
     height: $h;
     background-image: url($bgurl);
     background-position: center;

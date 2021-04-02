@@ -8,9 +8,23 @@
         .flex-wrap {
             padding: 4rem 0 8rem;
             display: flex;
+            @include flex-mixin($dir: row, $aic: flex-start, $jcc: flex-start);
+            @media screen and (max-width: 772px) {
+                @include flex-mixin($dir: row, $aic: flex-start, $jcc: space-between);
+            }
+            @media screen and (max-width: 572px) {
+                @include flex-mixin($dir: column, $aic: center, $jcc: center);
+            }
             .bloc-content {
-                padding-right: 1rem;
+                @include flex-mixin($dir: column, $aic: flex-start, $jcc: flex-start, $wrap: wrap);
+                padding-right: 3rem;
                 width: 30%;
+                @media screen and (max-width: 772px) {
+                    width: 50%;
+                }
+                @media screen and (max-width: 572px) {
+                    width: 100%;
+                }
                 font-size: .7rem;
                 line-height: 2rem;
                 h5 {
@@ -26,8 +40,12 @@
     .bottom-footer {
         padding: 1rem 0;
         background-color: $lightblack;
-        @include flex-mixin;
+        @include flex-mixin($dir: row);
         .flex-wrap {
+            @include flex-mixin($dir: row);
+            @media screen and (max-width: 772px) {
+                @include flex-mixin($dir: column, $aic: flex-start);
+            }
             .socials-nav a {
                 color: white;
             }

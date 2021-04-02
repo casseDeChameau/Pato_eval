@@ -16,7 +16,6 @@ var swiper = new Swiper('.swiper-container', {
 });
 $('.hero-banner, .review-banner').mouseenter(() => {
     $('.swiper-container *').addClass('show-arrows');
-    console.log('prout');
 }).mouseleave(() => {
     $('.swiper-container *').removeClass('show-arrows');
 });
